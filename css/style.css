@@ -317,13 +317,12 @@ p, dl, ol, ul { margin: 0; }
 }
 
 .model__bust {
+  display: block;
   margin: 0 auto;
-  width: max-content;
-  font-family: var(--font-body);
-  font-size: clamp(9px, 1.5vw, 13px);
-  line-height: 0.9;
-  color: var(--rust);
-  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  image-rendering: pixelated;
 }
 
 .model__scanline {

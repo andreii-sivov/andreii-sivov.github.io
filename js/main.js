@@ -85,71 +85,6 @@
   }
 
   /* ============================================================
-     SUBJECT MODEL — dithered pixel bust
-     A head-and-shoulders mask filled with shade blocks; density
-     falls off toward the edges, with per-cell dither noise.
-     ============================================================ */
-
-  function renderBust() {
-    var pre = document.getElementById('bust');
-    if (!pre) return;
-
-    var MASK = [
-      '..........########..........',
-      '.........##########.........',
-      '........############........',
-      '.......##############.......',
-      '.......##############.......',
-      '.......##############.......',
-      '.......##############.......',
-      '........############........',
-      '........############........',
-      '.........##########.........',
-      '..........########..........',
-      '...........######...........',
-      '...........######...........',
-      '.........##########.........',
-      '.......##############.......',
-      '.....##################.....',
-      '...######################...',
-      '..########################..',
-      '.##########################.',
-      '############################',
-      '############################',
-      '############################',
-      '############################',
-      '############################'
-    ];
-
-    var RAMP = ['░', '▒', '▓', '█'];
-    var out = [];
-
-    for (var y = 0; y < MASK.length; y++) {
-      var row = MASK[y];
-      var line = '';
-      // find the filled extent of this row for edge-based shading
-      var first = row.indexOf('#');
-      var last = row.lastIndexOf('#');
-      for (var x = 0; x < row.length; x++) {
-        if (row[x] !== '#') { line += ' '; continue; }
-        var span = Math.max(1, last - first);
-        var center = (first + last) / 2;
-        var edge = Math.abs(x - center) / (span / 2); // 0 center → 1 edge
-        var level = 2 - Math.floor(edge * 2.6);
-        // dither noise, strong enough to break up solid runs
-        var r = Math.random();
-        if (r < 0.3) level -= 1;
-        else if (r > 0.72) level += 1;
-        level = Math.max(0, Math.min(3, level));
-        line += RAMP[level];
-      }
-      out.push(line);
-    }
-
-    pre.textContent = out.join('\n');
-  }
-
-  /* ============================================================
      WINDOW CHROME — [–] collapse, [x] denied easter egg
      Buttons injected by JS so markup stays clean without it.
      ============================================================ */
@@ -307,7 +242,6 @@
      ============================================================ */
 
   document.addEventListener('DOMContentLoaded', function () {
-    renderBust();
     windowChrome();
     draggable();
     scrollspy();
