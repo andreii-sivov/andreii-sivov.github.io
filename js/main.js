@@ -348,14 +348,20 @@
     var el = document.getElementById('clock');
     if (!el) return;
     var MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    var narrow = window.matchMedia('(max-width: 640px)');
     function pad(n) { return (n < 10 ? '0' : '') + n; }
     function tick() {
       var d = new Date();
-      el.textContent = pad(d.getDate()) + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear() +
-        ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+      if (narrow.matches) {
+        el.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+      } else {
+        el.textContent = pad(d.getDate()) + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear() +
+          ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+      }
     }
     tick();
     setInterval(tick, 1000);
+    narrow.addEventListener('change', tick);
   }
 
   function countdown() {

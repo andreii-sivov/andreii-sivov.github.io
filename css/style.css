@@ -20,6 +20,12 @@
   --menubar-h: 32px;
   --taskbar-h: 48px;
   --gap: 20px;
+
+  /* iOS notch / home-indicator insets (0 on desktop) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
 }
 
 * { box-sizing: border-box; }
@@ -37,8 +43,8 @@ body {
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.65;
-  padding-top: var(--menubar-h);
-  padding-bottom: calc(var(--taskbar-h) + 24px);
+  padding-top: calc(var(--menubar-h) + var(--safe-top));
+  padding-bottom: calc(var(--taskbar-h) + 24px + var(--safe-bottom));
 }
 
 ::selection { background: var(--rust); color: var(--sand); }
@@ -62,11 +68,16 @@ p, dl, ol, ul { margin: 0; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
-  height: var(--menubar-h);
+  box-sizing: border-box;
+  min-height: calc(var(--menubar-h) + var(--safe-top));
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 0 16px;
+  padding:
+    var(--safe-top)
+    calc(16px + var(--safe-right))
+    0
+    calc(16px + var(--safe-left));
   background: var(--sand);
   border-bottom: var(--bw) solid var(--rust);
   font-family: var(--font-display);
@@ -191,7 +202,7 @@ p, dl, ol, ul { margin: 0; }
   gap: calc(var(--gap) * 1.8);
 }
 
-.zone { scroll-margin-top: calc(var(--menubar-h) + 16px); }
+.zone { scroll-margin-top: calc(var(--menubar-h) + var(--safe-top) + 16px); }
 
 .zone__grid { display: grid; gap: var(--gap); align-items: start; }
 .zone__grid--hero    { grid-template-columns: 1.55fr 1fr; }
@@ -762,12 +773,17 @@ p, dl, ol, ul { margin: 0; }
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 200;
-  height: var(--taskbar-h);
+  box-sizing: border-box;
+  min-height: calc(var(--taskbar-h) + var(--safe-bottom));
   display: flex;
   align-items: stretch;
   justify-content: center;
   gap: 8px;
-  padding: 5px 8px;
+  padding:
+    5px
+    calc(8px + var(--safe-right))
+    calc(5px + var(--safe-bottom))
+    calc(8px + var(--safe-left));
   background: var(--sand);
   border-top: var(--bw) solid var(--rust);
 }
@@ -830,7 +846,7 @@ p, dl, ol, ul { margin: 0; }
 
 .boot__hint {
   position: absolute;
-  bottom: 26px;
+  bottom: calc(26px + var(--safe-bottom));
   left: 0; right: 0;
   text-align: center;
   font-size: 10.5px;
@@ -863,6 +879,18 @@ p, dl, ol, ul { margin: 0; }
 @media (max-width: 640px) {
   body { font-size: 14px; }
 
+  .menubar {
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .menubar__menus { gap: 12px; }
+
+  .menubar__clock {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+
   .cards { grid-template-columns: 1fr; }
 
   .window__body { padding: 18px 16px 20px; }
@@ -889,7 +917,11 @@ p, dl, ol, ul { margin: 0; }
 
   .taskbar {
     gap: 5px;
-    padding: 5px 6px;
+    padding:
+      5px
+      calc(6px + var(--safe-right))
+      calc(5px + var(--safe-bottom))
+      calc(6px + var(--safe-left));
   }
   .taskbar__btn {
     flex: 1;
