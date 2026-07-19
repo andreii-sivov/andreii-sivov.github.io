@@ -210,6 +210,137 @@
   }
 
   /* ============================================================
+     SPECIAL MENU — "LET THE DUCK OUT" easter egg
+     A pixel duck (site palette) roams the screen for a few
+     seconds, then dashes off the nearest edge. Ducks stack.
+     ============================================================ */
+
+  var DUCK_SVG = (function () {
+    // 16×12 pixel map: R rust, C crimson, S sand, . empty
+    var MAP = [
+      '........RRRR....',
+      '.......RRRRRR...',
+      '.......RS.RRRCC.',
+      '.......RRRRRR...',
+      '..R...RRRRRR....',
+      '..RR.RRRRRRR....',
+      '...RRRCCRRRRR...',
+      '...RRRCRRRRRR...',
+      '....RRRRRRRR....',
+      '.....RRRRRR.....',
+      '.....C..C.......',
+      '....CC..CC......'
+    ];
+    var FILL = { R: '#8C2E1B', C: '#B23A22', S: '#F4E8D1' };
+    var rects = '';
+    for (var y = 0; y < MAP.length; y++) {
+      for (var x = 0; x < MAP[y].length; x++) {
+        var c = MAP[y][x];
+        if (FILL[c]) {
+          rects += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + FILL[c] + '"/>';
+        }
+      }
+    }
+    return '<svg class="duck__sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12" shape-rendering="crispEdges">' + rects + '</svg>';
+  })();
+
+  function spawnDuck() {
+    var el = document.createElement('div');
+    el.className = 'duck';
+    el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = DUCK_SVG;
+    document.body.appendChild(el);
+
+    var W = window.innerWidth, H = window.innerHeight;
+    var fromLeft = Math.random() < 0.5;
+    var x = fromLeft ? -60 : W + 60;
+    var y = 60 + Math.random() * Math.max(80, H - 220);
+    var speed = 140 + Math.random() * 120;           // px/s
+    var vx = (fromLeft ? 1 : -1) * speed;
+    var vy = 0;
+    var life = 5000 + Math.random() * 5000;          // roaming time, ms
+    var born = performance.now();
+    var lastTurn = born;
+    var leaving = false;
+    var last = born;
+
+    function frame(t) {
+      var dt = Math.min(50, t - last) / 1000;
+      last = t;
+      W = window.innerWidth;
+      H = window.innerHeight;
+
+      if (!leaving && t - born > life) {
+        // time's up: dash straight off the nearest side
+        leaving = true;
+        vx = (x > W / 2 ? 1 : -1) * speed * 1.7;
+        vy = 0;
+      }
+
+      if (!leaving && t - lastTurn > 400 + Math.random() * 900) {
+        // pick a new direction, biased horizontal so it reads as running
+        lastTurn = t;
+        var s = speed * (0.7 + Math.random() * 0.6);
+        var ang = (Math.random() * 2 - 1) * 0.9;
+        vx = Math.cos(ang) * s * (Math.random() < 0.5 ? -1 : 1);
+        vy = Math.sin(ang) * s * 0.6;
+      }
+
+      x += vx * dt;
+      y += vy * dt;
+
+      if (!leaving) {
+        // bounce off screen edges (menubar/taskbar respected)
+        if (x < 8 && vx < 0) vx = -vx;
+        if (x > W - 56 && vx > 0) vx = -vx;
+        if (y < 44 && vy < 0) vy = -vy;
+        if (y > H - 110 && vy > 0) vy = -vy;
+      }
+
+      el.style.transform = 'translate(' + x + 'px,' + y + 'px)' + (vx < 0 ? ' scaleX(-1)' : '');
+
+      if (leaving && (x < -80 || x > W + 80)) { el.remove(); return; }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function specialMenu() {
+    var btn = document.getElementById('menu-special');
+    var list = document.getElementById('menu-special-list');
+    var release = document.getElementById('duck-release');
+    var countEl = document.getElementById('duck-count');
+    if (!btn || !list || !release) return;
+
+    var released = 0;
+
+    function close() { list.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    function open() { list.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
+
+    btn.addEventListener('click', function () {
+      if (list.hidden) open(); else close();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!list.hidden && !e.target.closest('.menu')) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+
+    release.addEventListener('click', function () {
+      released++;
+      if (countEl) {
+        countEl.hidden = false;
+        countEl.textContent = 'DUCKS RELEASED: ' + released;
+      }
+      spawnDuck();
+      close();
+    });
+  }
+
+  /* ============================================================
      MENUBAR CLOCK + TALK COUNTDOWN
      ============================================================ */
 
@@ -244,6 +375,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     windowChrome();
     draggable();
+    specialMenu();
     scrollspy();
     clock();
     countdown();

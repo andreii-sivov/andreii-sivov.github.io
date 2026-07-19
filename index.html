@@ -36,8 +36,19 @@
   <!-- ===== MENU BAR ===== -->
   <header class="menubar">
     <span class="menubar__logo">▞▚ SIVOV_OS</span>
-    <nav class="menubar__menus" aria-hidden="true">
-      <span>FILE</span><span>EDIT</span><span>VIEW</span><span>SPECIAL</span>
+    <nav class="menubar__menus" aria-label="System menus">
+      <span class="menubar__dead" aria-hidden="true">FILE</span>
+      <span class="menubar__dead" aria-hidden="true">EDIT</span>
+      <span class="menubar__dead" aria-hidden="true">VIEW</span>
+      <div class="menu">
+        <button type="button" class="menu__btn" id="menu-special" aria-haspopup="true" aria-expanded="false">SPECIAL</button>
+        <ul class="menu__list" id="menu-special-list" role="menu" hidden>
+          <li role="none">
+            <button type="button" class="menu__item" id="duck-release" role="menuitem">LET THE DUCK OUT</button>
+          </li>
+          <li class="menu__count" id="duck-count" hidden>DUCKS RELEASED: 0</li>
+        </ul>
+      </div>
     </nav>
     <span class="menubar__clock" id="clock" aria-hidden="true"></span>
   </header>

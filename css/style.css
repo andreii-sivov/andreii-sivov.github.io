@@ -78,9 +78,99 @@ p, dl, ol, ul { margin: 0; }
 
 .menubar__menus {
   display: flex;
+  align-items: center;
   gap: 20px;
   color: var(--rust);
+}
+
+.menubar__dead { opacity: 0.75; }
+
+/* SPECIAL menu (classic-Mac dropdown) */
+
+.menu { position: relative; }
+
+.menu__btn {
+  background: none;
+  border: none;
+  padding: 1px 8px;
+  font: inherit;
+  color: var(--rust);
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.menu__btn:hover,
+.menu__btn[aria-expanded="true"] {
+  background: var(--rust);
+  color: var(--sand);
+}
+
+.menu__list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 300;
+  min-width: 220px;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--paper);
+  border: var(--bw) solid var(--rust);
+  box-shadow: 6px 6px 0 0 var(--shadow);
+}
+
+.menu__item {
+  display: block;
+  width: 100%;
+  padding: 4px 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  font: inherit;
+  color: var(--rust);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu__item:hover,
+.menu__item:focus-visible {
+  background: var(--rust);
+  color: var(--sand);
+}
+
+.menu__count {
+  margin-top: 4px;
+  padding: 5px 10px 2px;
+  border-top: 1.5px dashed var(--rust);
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   opacity: 0.75;
+}
+
+/* the duck itself */
+
+.duck {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.duck svg { display: block; width: 46px; height: auto; }
+
+.duck__sprite {
+  display: block;
+  animation: duck-bob 0.28s steps(2) infinite;
+}
+
+@keyframes duck-bob {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-3px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
 
 .menubar__clock {
@@ -766,7 +856,8 @@ p, dl, ol, ul { margin: 0; }
 
   #desktop { gap: calc(var(--gap) * 1.2); padding-top: var(--gap); }
 
-  .menubar__menus { display: none; }
+  /* keep SPECIAL (and its duck) reachable on mobile; drop the dead menus */
+  .menubar__dead { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -823,6 +914,7 @@ p, dl, ol, ul { margin: 0; }
   .model__scanline { display: none; }
   .kw:hover { animation: none; }
   .boot { display: none !important; }
+  .duck__sprite { animation: none; }
 }
 
 /* ============================================================
