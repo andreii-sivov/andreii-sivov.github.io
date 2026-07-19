@@ -1,0 +1,75 @@
+# Design System & Concept Architecture: "Red Sands Terminal"
+
+## 1. Core Concept & Philosophy
+
+The **"Red Sands Terminal"** concept bridges the gap between retro-computing aesthetics and modern computational behavioral science. It conceptualizes the human mind and social behavior as complex, decipherable data systems. The visual language uses early GUI (Graphical User Interface) elements, monospace typography, and dithered textures to reflect a deep, analytical approach to Human-Computer Interaction (HCI) and AI safety. It is a digital archive of your academic identity.
+
+## 2. Color Palette
+
+The palette is strictly limited to a warm, two-tone monochromatic scheme to emulate vintage monochrome CRT monitors and early Macintosh interfaces, providing high contrast and a distinct, memorable aesthetic.
+
+* **Terminal Sand (Background):** `#F4E8D1` (Warm, pale beige) — Acts as the canvas, easy on the eyes for reading long text.
+* **Rust Ink (Primary Text & Borders):** `#8C2E1B` (Deep terracotta/rust red) — Used for all text, UI borders, grid lines, and illustrations.
+* **Active Crimson (Accent/Hover States):** `#B23A22` (Brighter red) — Used sparingly for interactive elements, hyperlinks, and terminal cursors (`_`).
+
+## 3. Typography
+
+The typographic hierarchy relies entirely on monospaced and pixelated fonts to maintain the illusion of a terminal environment.
+
+* **Display & UI Headers:** *VCR OSD Mono* or *VT323* (Pixelated, jagged, structural). Used for window titles, massive keywords in the central silhouette, and primary navigation.
+* **Body & Data Logs:** *IBM Plex Mono* or *Courier Prime* (Clean monospace). Used for the actual content of the resume, article abstracts, and chronological details to ensure readability without breaking the theme.
+* **Styling Rules:** ALL CAPS for system headers and folders. Sentence case for actual human-readable content.
+
+## 4. Visual Components & Textures
+
+* **Dithering:** Images (such as your portrait or project thumbnails) are processed using a 1-bit Bayer dithering algorithm. This turns standard photos into pixelated, two-color (Sand and Rust) dot patterns.
+* **Classic OS Windows:** All content is housed within rigid, 2px-bordered boxes mimicking old operating systems. Each window features a title bar (e.g., `[ - ] [ x ] BIOGRAPHY_EVENTS.exe`).
+* **Terminal Elements:** Flashing underscores (`_`), ASCII brackets `[ ]`, and system-level iconography (pixelated folders, floppy disks, trash cans).
+
+---
+
+## 5. Spatial Layout (The 3-Column Grid)
+
+The one-page layout is designed as a fully expanded desktop environment, utilizing a balanced 3-column structure.
+
+### Column 1: The Left Panel (Chronology & Status)
+
+* **Window: `BIOGRAPHY_EVENTS [SIVOV]**`
+* A structured vertical timeline of your academic and professional path.
+* Features distinct nodes for **2019–2024** (BA SPbU, Top of cohort), **2024–2026** (MA HSE & Grant Project Manager), **2025–2027** (MA Pécs, Stipendium Hungaricum), and **Current** (HumanteQ AI Systems Analyst).
+
+
+* **Window: `SYSTEM_STATUS**`
+* A small utility widget displaying current location (Hungary) and a "System Status: Online" indicator to house your contact email.
+
+
+
+### Column 2: The Center (Core Identity)
+
+* **The Typographic Silhouette:** The focal point of the site. A human figure constructed entirely out of typographic keywords with varying weights and sizes (e.g., **LLM SAFETY**, **HUMAN-AI**, **DIGITAL NUDGING**, **QUANT METHODS**, **BEHAVIORAL**, **HCI**).
+* *Concept:* Visually translates the idea that your research involves breaking down and understanding human behavior through data and digital environments.
+* *Interaction:* On mouse hover, specific keywords within the silhouette can invert colors or trigger a brief "glitch" effect.
+
+
+
+### Column 3: The Right Panel (Output & Evidence)
+
+* **Window: `RESEARCH_PORTFOLIO.dir**`
+* Structured lists of your applied projects. Each project (e.g., *Personality Nudging Bot*, *Induced Nostalgia Exp*) features a dithered thumbnail image, a brief abstract, and tags indicating the tech stack (R, R, R, Multilevel ANOVA).
+
+
+* **Window: `PUBLICATIONS.lib**`
+* A clean, scrollable list of academic papers.
+* Items like *Beyond Clinical Vignettes* and the *Stolypin Bulletin* nudging paper are displayed with their respective Q-ratings and DOIs styled as terminal output codes. Includes direct `[ READ ]` hyperlink buttons.
+
+
+
+---
+
+## 6. Interaction & Motion Design (UX)
+
+To bring the static concept to life in a browser:
+
+* **Boot Sequence:** When the user loads the page, a 1.5-second terminal "bootup" sequence types out system checks (e.g., `Loading core parameters... Parsing psychological data... Welcome, User.`) before revealing the main interface.
+* **Draggable Windows:** Utilizing JavaScript libraries (like jQuery UI or custom vanilla JS), allowing users to click and drag the headers of the CV, Projects, and Publication windows around the screen.
+* **Typing Effects:** Bios and abstracts render using a fast typewriter effect, making it feel as though the data is being actively queried and printed to the screen.

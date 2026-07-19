@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrei Sivov — LLM Safety &amp; Digital Behavior Research</title>
+  <meta name="description" content="Andrei Sivov — psychologist turned data analyst researching the safety of LLM-based psychological support, human-AI interaction, and digital behavior.">
+  <meta name="theme-color" content="#F4E8D1">
+  <meta property="og:title" content="Andrei Sivov — LLM Safety &amp; Digital Behavior Research">
+  <meta property="og:description" content="Psychologist turned data analyst. I test whether AI that offers psychological support is actually safe for the people who trust it.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23F4E8D1'/%3E%3Crect x='1' y='1' width='14' height='14' fill='none' stroke='%238C2E1B' stroke-width='2'/%3E%3Crect x='4' y='10' width='6' height='2' fill='%23B23A22'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrei Sivov",
+    "email": "mailto:andreii.sivov@gmail.com",
+    "jobTitle": "Researcher; Product Manager & Systems Analyst",
+    "worksFor": { "@type": "Organization", "name": "HumanteQ" },
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "University of Pécs" },
+      { "@type": "CollegeOrUniversity", "name": "Higher School of Economics" }
+    ],
+    "knowsAbout": ["LLM safety", "human-AI interaction", "digital nudging", "computational social science", "experimental methods"],
+    "address": { "@type": "PostalAddress", "addressCountry": "Hungary" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== MENU BAR ===== -->
+  <header class="menubar">
+    <span class="menubar__logo">▞▚ SIVOV_OS</span>
+    <nav class="menubar__menus" aria-hidden="true">
+      <span>FILE</span><span>EDIT</span><span>VIEW</span><span>SPECIAL</span>
+    </nav>
+    <span class="menubar__clock" id="clock" aria-hidden="true"></span>
+  </header>
+
+  <main id="desktop">
+
+    <!-- ===== 01 · IDENTITY ===== -->
+    <section id="identity" class="zone" aria-label="Identity">
+      <div class="zone__grid zone__grid--hero">
+
+        <article class="window" data-window>
+          <header class="window__bar" data-drag-handle>
+            <span class="window__title">▪ IDENTITY.SYS</span>
+          </header>
+          <div class="window__body hero">
+            <p class="eyebrow">RESEARCHER_PROFILE // EST. 2019</p>
+            <h1 class="hero__name">ANDREI<br>SIVOV</h1>
+            <p class="hero__thesis"><span class="typed" data-typed>I test whether AI that offers psychological support is actually safe for the people who trust it.</span><span class="cursor" aria-hidden="true">_</span></p>
+            <dl class="statgrid">
+              <div class="statgrid__row"><dt>LOCATION</dt><dd>Pécs, Hungary</dd></div>
+              <div class="statgrid__row"><dt>ROLE</dt><dd>Researcher · Product manager &amp; systems analyst @ HumanteQ</dd></div>
+              <div class="statgrid__row"><dt>FOCUS</dt><dd>LLM safety · human–AI interaction · digital behavior</dd></div>
+              <div class="statgrid__row"><dt>CONTACT</dt><dd><a href="mailto:andreii.sivov@gmail.com">andreii.sivov@gmail.com</a></dd></div>
+              <div class="statgrid__row"><dt>STATUS</dt><dd><span class="online-dot" aria-hidden="true"></span> ONLINE — open to collaboration</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="window window--model" data-window>
+          <header class="window__bar" data-drag-handle>
+            <span class="window__title">▪ SUBJECT: HUMAN</span>
+          </header>
+          <div class="window__body model">
+            <div class="model__stage">
+              <pre class="model__bust" id="bust" aria-hidden="true"></pre>
+              <div class="model__scanline" aria-hidden="true"></div>
+              <ul class="model__keywords" aria-label="Research interests">
+                <li class="kw" style="--kx: 6%;  --ky: 12%;">LLM SAFETY</li>
+                <li class="kw" style="--kx: 58%; --ky: 26%;">HUMAN–AI</li>
+                <li class="kw" style="--kx: 4%;  --ky: 44%;">BEHAVIORAL</li>
+                <li class="kw" style="--kx: 54%; --ky: 58%;">DIGITAL NUDGING</li>
+                <li class="kw" style="--kx: 8%;  --ky: 72%;">QUANT METHODS</li>
+                <li class="kw" style="--kx: 60%; --ky: 86%;">HCI</li>
+              </ul>
+            </div>
+            <p class="model__caption">FIG. 1 — the system under study. Resolution improves yearly.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== 02 · TRAJECTORY + WORLDVIEW ===== -->
+    <section id="trajectory" class="zone" aria-label="Trajectory and worldview">
+      <div class="zone__grid zone__grid--story">
+
+        <article class="window" data-window>
+          <header class="window__bar" data-drag-handle>
+            <span class="window__title">▪ TRAJECTORY.LOG</span>
+          </header>
+          <div class="window__body">
+            <p class="cmdline" aria-hidden="true">$ tail -f /var/log/trajectory.log</p>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__stamp"><span class="timeline__year">[2019]</span> BOOT · ST. PETERSBURG</p>
+                <p class="timeline__text">Started a psychology degree at SPbU with the oldest question in the field: why do people do what they do?</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__stamp"><span class="timeline__year">[2022]</span> FIRST FIELD DATA</p>
+                <p class="timeline__text">Ran my first studies on digital nudges and personality, and gave my first conference talk. Lesson learned: lab intuitions rarely survive contact with real behavior.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__stamp"><span class="timeline__year">[2024]</span> METHOD UPGRADE</p>
+                <p class="timeline__text">Finished the BA top of cohort (GPA 4.9/5) and led a nostalgia experiment with a team of 30 interviewers — later a Q1 paper. Started an MA in Data Analytics at HSE: the questions I cared about had outgrown my methods.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__stamp"><span class="timeline__year">[2025]</span> RELOCATE → HUNGARY</p>
+                <p class="timeline__text">Won a Stipendium Hungaricum scholarship for a second MA at the University of Pécs, run in parallel with HSE. Joined HumanteQ to help build an LLM-based psychological-support system in production.</p>
+              </li>
+              <li class="timeline__item timeline__item--current">
+                <p class="timeline__stamp"><span class="timeline__year">[2026]</span> CURRENT PROCESS</p>
+                <p class="timeline__text">Research-team member on RSF grant № 25-28-0317, building a user-grounded framework for evaluating LLM safety in psychological support. First-author paper accepted (LNCS); presenting at HCI International 2026 in Montreal.</p>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="window" data-window>
+          <header class="window__bar" data-drag-handle>
+            <span class="window__title">▪ WORLDVIEW.TXT</span>
+          </header>
+          <div class="window__body">
+            <p class="cmdline" aria-hidden="true">$ cat worldview.txt</p>
+            <div class="creed">
+              <div class="creed__item">
+                <h3 class="creed__title">Behavior is data; data is people.</h3>
+                <p>Every row in my datasets is someone's evening, habit, or bad week. Quantitative methods aren't a way to look past people — they're a way to take them seriously.</p>
+              </div>
+              <div class="creed__item">
+                <h3 class="creed__title">A convincing interface is a responsibility.</h3>
+                <p>LLMs already sound caring. Whether they actually help — especially someone in crisis — is an empirical question, and one worth answering before scaling.</p>
+              </div>
+              <div class="creed__item">
+                <h3 class="creed__title">Fields over vignettes.</h3>
+                <p>Real users don't behave like clinical scenarios. I build studies — bots, experiments, A/B tests — that meet people where they actually are: online, distracted, vulnerable.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== 03 · RESEARCH ===== -->
+    <section id="research" class="zone" aria-label="Research projects">
+      <article class="window" data-window>
+        <header class="window__bar" data-drag-handle>
+          <span class="window__title">▪ RESEARCH.DIR — 6 ITEMS</span>
+        </header>
+        <div class="window__body">
+          <div class="cards">
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">SAFETY_FRAMEWORK/</h3><span class="card__year">2026</span></header>
+              <p class="card__sub">Beyond clinical vignettes</p>
+              <p class="card__desc">A user-grounded framework for evaluating the safety risks of LLM-based psychological support — built from how people actually use these systems, not idealized scripts. RSF grant № 25-28-0317.</p>
+              <p class="card__tags"><span>AI SAFETY</span><span>LNCS</span><span>HCII 2026</span></p>
+              <p class="card__links"><a class="btn" href="assets/papers/beyond-clinical-vignettes.pdf">READ PAPER</a></p>
+            </article>
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">DIALOGUE_SYSTEM/</h3><span class="card__year">2025–NOW</span></header>
+              <p class="card__sub">LLM support, in production</p>
+              <p class="card__desc">At HumanteQ: designed the architecture of an LLM dialogue system for psychological support, translating safety requirements into technical specs — then A/B-tested what actually helps.</p>
+              <p class="card__tags"><span>PRODUCT</span><span>PRD</span><span>A/B TESTS</span></p>
+            </article>
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">NUDGE_BOT/</h3><span class="card__year">2024</span></header>
+              <p class="card__sub">Personality × persuasion</p>
+              <p class="card__desc">Built a Telegram bot as a field lab: behavioral data collection for 300+ users and multilevel logistic regression on who responds to which nudge.</p>
+              <p class="card__tags"><span>TELEGRAM</span><span>R</span><span>MULTILEVEL</span></p>
+            </article>
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">NOSTALGIA_EXP/</h3><span class="card__year">2024</span></header>
+              <p class="card__sub">Emotions, induced on demand</p>
+              <p class="card__desc">Designed a digital experiment on induced nostalgia and psycho-emotional state; managed data collection with 30 interviewers; regression analysis published in a Q1 journal.</p>
+              <p class="card__tags"><span>EXPERIMENT</span><span>R</span><span>Q1</span></p>
+              <p class="card__links"><a class="btn" href="assets/papers/nostalgia-affective-consequences.pdf">READ PAPER</a></p>
+            </article>
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">SOCIAL_SIGNATURE/</h3><span class="card__year">2024–25</span></header>
+              <p class="card__sub">Networks through motherhood</p>
+              <p class="card__desc">Managed an HSE grant project tracking the stability of women's social signatures through pregnancy and the birth of a first child; manuscript in preparation.</p>
+              <p class="card__tags"><span>PM</span><span>R</span><span>SOCIAL NETWORKS</span></p>
+            </article>
+
+            <article class="card">
+              <header class="card__head"><span class="card__folder" aria-hidden="true">▨</span><h3 class="card__name">NUDGE_SUSCEPT/</h3><span class="card__year">2022</span></header>
+              <p class="card__sub">Who can be nudged?</p>
+              <p class="card__desc">Studied personalization of digital wellbeing interventions with multilevel ANOVA — the study that pulled me from pure psychology into digital behavior.</p>
+              <p class="card__tags"><span>ANOVA</span><span>WELLBEING</span></p>
+            </article>
+
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== 04 · LIBRARY ===== -->
+    <section id="library" class="zone" aria-label="Publications, talks and capabilities">
+      <div class="zone__grid zone__grid--library">
+
+        <article class="window" data-window>
+          <header class="window__bar" data-drag-handle>
+            <span class="window__title">▪ PUBLICATIONS.LIB</span>
+          </header>
+          <div class="window__body">
+            <ol class="pubs">
+              <li class="pub">
+                <p class="pub__title">Beyond Clinical Vignettes: A User-Grounded Framework for Evaluating Safety in AI Psychological Support</p>
+                <p class="pub__meta">FIRST AUTHOR · <span class="chip">LNCS</span> · ACCEPTED, FALL 2026 · RSF GRANT № 25-28-0317</p>
+                <p class="pub__links"><a class="btn" href="assets/papers/beyond-clinical-vignettes.pdf">READ PDF</a></p>
+              </li>
+              <li class="pub">
+                <p class="pub__title">Experimental Testing of the Affective Consequences of Nostalgia</p>
+                <p class="pub__meta">CO-AUTHOR · PSYCHOLOGY IN RUSSIA · <span class="chip">Q1</span> · DOI: 10.11621/PIR.2026.0103</p>
+                <p class="pub__links"><a class="btn" href="assets/papers/nostalgia-affective-consequences.pdf">READ PDF</a> <a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13196901/" rel="noopener">PMC</a></p>
+              </li>
+              <li class="pub">
+                <p class="pub__title">Boundaries of AI Responsibility in Therapeutic Contexts: A Gap in Current Safety Frameworks</p>
+                <p class="pub__meta">CONFERENCE PROCEEDINGS</p>
+                <p class="pub__links"><a class="btn" href="https://www.researchgate.net/profile/Marine-Mikaelian/publication/400204868_PSYCHOLOGICAL_SUPPORT_FOR_WAR-AFFECTED_AND_DISPLACED_CHILDREN_THE_CASE_OF_ARTSAKH_RESIDENTS/links/6983a0635d60ab48356b1727/PSYCHOLOGICAL-SUPPORT-FOR-WAR-AFFECTED-AND-DISPLACED-CHILDREN-THE-CASE-OF-ARTSAKH-RESIDENTS.pdf#page=132" rel="noopener">OPEN</a></p>
+              </li>
+              <li class="pub">
+                <p class="pub__title">Personality Traits as Factors for the Effectiveness of Different Types of Nudging</p>
+                <p class="pub__meta">CONFERENCE PROCEEDINGS</p>
+                <p class="pub__links"><a class="btn" href="https://www.researchgate.net/profile/Marine-Mikaelian/publication/400204868_PSYCHOLOGICAL_SUPPORT_FOR_WAR-AFFECTED_AND_DISPLACED_CHILDREN_THE_CASE_OF_ARTSAKH_RESIDENTS/links/6983a0635d60ab48356b1727/PSYCHOLOGICAL-SUPPORT-FOR-WAR-AFFECTED-AND-DISPLACED-CHILDREN-THE-CASE-OF-ARTSAKH-RESIDENTS.pdf#page=22" rel="noopener">OPEN</a></p>
+              </li>
+              <li class="pub">
+                <p class="pub__title">Digital Nudging: European Experience in Stimulating Pro-social Behavior and Ethical Decisions in an Online Environment</p>
+                <p class="pub__meta">STOLYPIN BULLETIN, V. 5, № 11 · 2023 · <span class="chip">RSCI</span></p>
+              </li>
+              <li class="pub">
+                <p class="pub__title">Personality Traits as a Factor of Subjective Susceptibility to Nudges</p>
+                <p class="pub__meta">ANANYEV READINGS PROCEEDINGS, PP. 73–74 · 2022 · <span class="chip">RSCI</span></p>
+              </li>
+              <li class="pub pub--pending">
+                <p class="pub__title">Stability of Women's Social Signature During Pregnancy and the Birth of the First Child</p>
+                <p class="pub__meta">CO-AUTHOR · <span class="chip chip--dim">IN PREPARATION</span> · HSE RESEARCH GROUP</p>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <div class="zone__stack">
+
+          <article class="window" data-window>
+            <header class="window__bar" data-drag-handle>
+              <span class="window__title">▪ TALKS.LOG</span>
+            </header>
+            <div class="window__body">
+              <ul class="talks">
+                <li class="talk talk--next">
+                  <p class="talk__when">28 JUL 2026 · MONTREAL <span class="chip chip--live" id="talk-countdown">UPCOMING</span></p>
+                  <p class="talk__what">HCI International 2026 — selected presenter, session S137: AI-based opinion detection — predictive modeling and synthetic data in mediatized public-opinion research.</p>
+                </li>
+                <li class="talk">
+                  <p class="talk__when">2024 · ANANYEV READINGS</p>
+                  <p class="talk__what">The impact of induced nostalgia on psycho-emotional state: an experimental study.</p>
+                </li>
+                <li class="talk">
+                  <p class="talk__when">2023 · INT. CONF. ON SDG</p>
+                  <p class="talk__what">Digital nudging for promoting well-being in the pursuit of sustainable development.</p>
+                </li>
+                <li class="talk">
+                  <p class="talk__when">2022 · ANANYEV READINGS</p>
+                  <p class="talk__what">Personality traits as a factor of subjective susceptibility to nudges.</p>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="window" data-window>
+            <header class="window__bar" data-drag-handle>
+              <span class="window__title">▪ CAPABILITIES.SYS</span>
+            </header>
+            <div class="window__body">
+              <p class="cmdline" aria-hidden="true">$ ./diagnostics --full</p>
+              <dl class="caps">
+                <div class="caps__row"><dt>STATS</dt><dd>R <em class="lvl">ADVANCED</em> · SPSS · SQL · Python <em class="lvl">WORKING</em></dd></div>
+                <div class="caps__row"><dt>MODELS</dt><dd>Multilevel &amp; logistic regression · ANOVA · linear models</dd></div>
+                <div class="caps__row"><dt>FIELD</dt><dd>Experimental design · A/B testing · surveys · behavioral data pipelines (Telegram bots)</dd></div>
+                <div class="caps__row"><dt>AI/LLM</dt><dd>Prompt engineering · LLM output-quality evaluation</dd></div>
+                <div class="caps__row"><dt>WEB</dt><dd>HTML · CSS · JS — experimental platforms, and this site</dd></div>
+                <div class="caps__row"><dt>LANG</dt><dd>English <em class="lvl">C1 · IELTS 7.5</em> · Russian <em class="lvl">NATIVE</em></dd></div>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 · CONTACT ===== -->
+    <section id="contact" class="zone" aria-label="Contact">
+      <article class="window" data-window>
+        <header class="window__bar" data-drag-handle>
+          <span class="window__title">▪ CONTACT.EXE</span>
+        </header>
+        <div class="window__body outro">
+          <p class="cmdline" aria-hidden="true">$ mail -s "hello" andreii.sivov@gmail.com</p>
+          <p class="outro__pitch">Open to collaboration on AI safety, human–AI interaction, and digital-behavior research.</p>
+          <a class="btn btn--big" href="mailto:andreii.sivov@gmail.com">SAY HELLO</a>
+          <p class="outro__meta">© 2026 ANDREI SIVOV · SIVOV_OS · HANDMADE HTML/CSS/JS · NO TRACKERS, NO COOKIES</p>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ===== TASKBAR ===== -->
+  <nav class="taskbar" aria-label="Sections">
+    <a class="taskbar__btn" href="#identity"><span class="taskbar__icon" aria-hidden="true">▣</span><span class="taskbar__label">IDENTITY</span></a>
+    <a class="taskbar__btn" href="#trajectory"><span class="taskbar__icon" aria-hidden="true">≡</span><span class="taskbar__label">STORY</span></a>
+    <a class="taskbar__btn" href="#research"><span class="taskbar__icon" aria-hidden="true">▤</span><span class="taskbar__label">RESEARCH</span></a>
+    <a class="taskbar__btn" href="#library"><span class="taskbar__icon" aria-hidden="true">▥</span><span class="taskbar__label">LIBRARY</span></a>
+    <a class="taskbar__btn" href="#contact"><span class="taskbar__icon" aria-hidden="true">✉</span><span class="taskbar__label">SAY HI</span></a>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

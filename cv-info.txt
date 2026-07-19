@@ -1,0 +1,54 @@
+ANDREI SIVOV
+Hungary  ·  andreii.sivov@gmail.com 
+RESEARCH INTERESTS
+Safety and risk evaluation of LLM-based psychological support; human–AI interaction; computational social science; digital nudging and wellbeing; experimental and quantitative methods in digital behavior research.
+EDUCATION
+University of Pécs — MA in Data Analytics (Sociology)	Hungary · 2025 – 2027 (expected)
+•	Full Hungarian government scholarship (Stipendium Hungaricum), awarded competitively to international students.
+Higher School of Economics (HSE) — MA in Data Analytics for Politics and Society	Russia · 2024 – 2026
+•	Thesis: “Assessment of Immediate Risks in LLM-Based Psychological Support.”
+•	GPA 8/10. Completed in parallel with the MA at Pécs.
+St. Petersburg State University (SPbU) — BA in Psychology	Russia · 2019 – 2024
+•	GPA 4.9/5 (top of cohort).
+PUBLICATIONS
+Beyond Clinical Vignettes: A User-Grounded Framework for Evaluating Safety in AI Psychological Support. First author. Accepted for publication in LNCS, Fall 2026 (output of RSF grant No. 25-28-0317). 
+Experimental Testing of the Affective Consequences of Nostalgia. Co-author. Psychology in Russia (Q1). doi: 10.11621/pir.2026.0103. https://pmc.ncbi.nlm.nih.gov/articles/PMC13196901/ 
+Stability of Women’s Social Signature During Pregnancy and the Birth of the First Child. Co-author. Manuscript in preparation (HSE research group project).
+PERSONALITY TRAITS AS FACTORS FOR THE EFFECTIVENESS OF DIFFERENT TYPES OF NUDGING - https://www.researchgate.net/profile/Marine-Mikaelian/publication/400204868_PSYCHOLOGICAL_SUPPORT_FOR_WAR-AFFECTED_AND_DISPLACED_CHILDREN_THE_CASE_OF_ARTSAKH_RESIDENTS/links/6983a0635d60ab48356b1727/PSYCHOLOGICAL-SUPPORT-FOR-WAR-AFFECTED-AND-DISPLACED-CHILDREN-THE-CASE-OF-ARTSAKH-RESIDENTS.pdf#page=22 
+Digital Nudging: European Experience in Stimulating Pro-social Behavior and Ethical Decisions in an Online Environment. Stolypin Bulletin, 2023, V. 5, No. 11. (RSCI-indexed).
+Personality Traits as a Factor of Subjective Susceptibility to Nudges. Conference proceedings, Ananyev Readings 2022, pp. 73–74 RSCI-indexed).
+BOUNDARIES OF AI RESPONSIBILITY IN THERAPEUTIC CONTEXTS: A GAP IN CURRENT SAFETY FRAMEWORK - https://www.researchgate.net/profile/Marine-Mikaelian/publication/400204868_PSYCHOLOGICAL_SUPPORT_FOR_WAR-AFFECTED_AND_DISPLACED_CHILDREN_THE_CASE_OF_ARTSAKH_RESIDENTS/links/6983a0635d60ab48356b1727/PSYCHOLOGICAL-SUPPORT-FOR-WAR-AFFECTED-AND-DISPLACED-CHILDREN-THE-CASE-OF-ARTSAKH-RESIDENTS.pdf#page=132 
+CONFERENCE PRESENTATIONS
+HCI International 2026 (Montreal, Canada): selected presenter, parallel session S137 “AI-based opinion detection: Predictive modeling and synthetic data in mediatized public opinion research — II,” 28 July 2026.
+Ananyev Readings 2024: “The Impact of Induced Nostalgia on Psycho-emotional State: An Experimental Study” (RSCI-indexed conference).
+International Conference on Sustainable Development Goals 2023: “Digital Nudging for Promoting Well-being in the Pursuit of Sustainable Development” (presented in English).
+Ananyev Readings 2022: “Personality Traits as a Factor of Subjective Susceptibility to Nudges.”
+RESEARCH EXPERIENCE
+Russian Science Foundation Grant No. 25-28-0317 — Research Team Member	2026
+Funded project on AI in psychological support
+•	Co-developed a user-grounded framework for evaluating safety risks of LLM-based psychological support; co-authored the resulting paper (LNCS accepted, Fall 2026).
+•	Selected to present the project’s findings at HCI International 2026 (Montreal).
+HSE — Research Assistant, Evidence-Based Health and Well-being Psychology Laboratory	2024 – 2025
+•	Processed and analyzed research data in R; coordinated research design and data-collection procedures across projects.
+HSE Grant — Project Manager, Research Group “Psychology of Communication in the Digital World”     	2024 – 2025
+•	Coordinated the project “Dynamics of Women’s Social Signature and Subjective Well-being During the Birth of the First Child”; analyzed social-signature distribution data; co-authored the resulting manuscript.
+Independent Research Projects	2022 – 2024
+•	Induced nostalgia and psycho-emotional state (2024): designed a digital experimental study; managed data collection with a team of 30 interviewers; analyzed data with linear regression; results published in a Q1 journal.
+•	Personality factors in nudging effectiveness (2024): built a Telegram bot for field experiments; designed behavioral data collection and storage for 300+ users; applied multilevel logistic regression.
+•	Susceptibility to digital nudges (2022): studied personalization of digital wellbeing interventions using multilevel ANOVA; presented at an international conference.
+INDUSTRY EXPERIENCE
+HumanteQ — Product Manager & Systems Analyst (AI dialogue system for psychological support)	    2025 – Present
+•	Designed the architecture of an LLM-based dialogue system for psychological support, translating psychological safety requirements into technical specifications and PRDs.
+•	Designed, launched, and evaluated A/B tests measuring feature impact and user engagement.
+Data Processing Technologies LLC — Research Psychologist / Analyst	2023 – 2024
+•	Analyzed user behavior and engagement metrics (MAU, DAU); prepared analytical reports informing product and communication design.
+GRANTS, AWARDS & SCHOLARSHIPS
+•	Stipendium Hungaricum — full Hungarian government scholarship (2025–2027).
+•	Russian Science Foundation grant No. 25-28-0317 — funded research team member (2026).
+•	HSE research group grant — project manager (2024–present).
+TECHNICAL SKILLS
+•	Statistical analysis: R (advanced), SPSS, SQL, Python (working knowledge); multilevel regression, logistic regression, ANOVA, linear models.
+•	Experimental methods: experimental design for digital field studies, A/B testing, survey design, behavioral data pipelines (incl. Telegram-bot-based data collection).
+•	Other: prompt engineering and LLM output quality evaluation; basic front-end (HTML, CSS, JavaScript) for experimental platforms.
+LANGUAGES
+•	English — C1 (TOEFL iBT: August 2026, IELTS 7.5 (2022)); Russian — native.
